@@ -19,7 +19,8 @@ class DocumentedConstructor extends DocumentedItem {
 			description: this.directData.description,
 			see: this.directData.see,
 			access: this.directData.access,
-			params: this.directData.params ? this.directData.params.map(p => p.serialize()) : undefined
+			params: this.directData.params ? this.directData.params.map(p => p.serialize()) : undefined,
+			examples: this.directData.examples
 		};
 	}
 }
