@@ -18,8 +18,8 @@ class DocumentedVarType extends DocumentedItem {
 
 	static splitVarName(str) {
 		if(str === '*') return ['*'];
-		str = str.replace(/\.</g, '<');
-		const matches = str.match(/([\w*'"]+)([^\w*]?)/g);
+		str = str.replace(/\.<\(*/g, '<').replace(/\)>/g, '>');
+		const matches = str.match(/([\w*'"]+)([^\w*]*)/g);
 		const output = [];
 		if(matches) {
 			for(const match of matches) {
