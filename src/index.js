@@ -35,7 +35,7 @@ if(config.custom) {
 		// Parse the definition file
 		let definitions;
 		if(type === 'json') definitions = JSON.parse(defContent);
-		else definitions = require('js-yaml').safeLoad(defContent);
+		else definitions = require('js-yaml').load(defContent);
 
 		const custom = {};
 		const filePromises = [];
