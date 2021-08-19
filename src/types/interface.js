@@ -1,18 +1,18 @@
 const DocumentedClass = require('./class');
 
 class DocumentedInterface extends DocumentedClass {
-	registerMetaInfo(data) {
-		super.registerMetaInfo(data);
-		this.directData = data;
-		// Old code?
-		// this.directData.meta = new DocumentedItemMeta(this, data.meta);
-	}
+  registerMetaInfo(data) {
+    super.registerMetaInfo(data);
+    this.directData = data;
+    // Old code?
+    // this.directData.meta = new DocumentedItemMeta(this, data.meta);
+  }
 
-	serializer() {
-		const serialized = super.serializer();
-		serialized.description = this.directData.classdesc;
-		return serialized;
-	}
+  serializer() {
+    const serialized = super.serializer();
+    serialized.description = this.directData.classdesc;
+    return serialized;
+  }
 }
 
 /*
