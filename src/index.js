@@ -22,7 +22,6 @@ mainPromises[0] = jsdoc2md.getTemplateData({
   files,
   configure: config.jsdoc
 }).then(data => {
-  fs.writeFileSync('./output.json', JSON.stringify(data, null, 2));
   console.log(`${data.length} JSDoc items parsed.`);
   return data;
 });

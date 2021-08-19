@@ -112,7 +112,7 @@ class Documentation {
   }
 
   static get FORMAT_VERSION() {
-    return 21;
+    return 22;
   }
 }
 
